@@ -86,11 +86,15 @@ void MainWindow::stopUpdate()   {
 void MainWindow::on_startButton_clicked()
 {
     if(ui->startButton->text()=="Start!")   {
+        ui->startButton->setStyleSheet("QPushButton{color: #fff;background-color: #d9534f;}");
+        ui->startButton->setStyleSheet("QPushButton:hover{color: #fff;background-color: #c9302c;}");
         ui->startButton->setText("Stop!");
         ui->label->setText("No."+QString::number(++startTimes));
         startUpdate();
     }
     else {
+        ui->startButton->setStyleSheet("QPushButton{color: #fff;background-color: #5cb85c;}");
+        ui->startButton->setStyleSheet("QPushButton:hover{color: #fff;background-color: #449d44;}");
         ui->startButton->setText("Start!");
         stopUpdate();
     }
